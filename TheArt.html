@@ -8,13 +8,46 @@
 		img {
 			max-width: 100vw;
 		}
+		.content {
+			display: none;
+		}
+		.home {
+			text-decoration: none;
+			color: black;
+		}
 	</style>
 </head>
 
 <body>
-	<img src="Images/GranCig_Christmas.png">
-	<img src="Images/JaundiceMoreLikeJaunWORTH.jpg">
-	<img src="Images/TheLastCiggy.jpg">
+	<a class="home" href="javascript:history.back()">Home<br></a>
+	<button class="collapsible">Christmas Granny</button>
+	<div class="content">
+		<img src="Images/GranCig_Christmas.png">
+	</div>
+	<button class="collapsible">Jaundice Granny</button>
+	<div class="content">
+		<img src="Images/JaundiceMoreLikeJaunWORTH.jpg">
+	</div>
+	<button class="collapsible">Story Time Granny</button>
+	<div class="content">
+		<img src="Images/TheLastCiggy.jpg">
+	</div>
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var content = this.nextElementSibling;
+		    if (content.style.display === "block") {
+		      content.style.display = "none";
+		    } else {
+		      content.style.display = "block";
+		    }
+		  });
+		}
+	</script>
 </body>
 
 </html>
