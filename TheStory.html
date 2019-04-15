@@ -5,24 +5,203 @@
 <head>
 	<title>The Story</title>
 	<style type="text/css">
+		body {
+			background-color: #b9dae8;
+		}
 		p {
 			color: black;
 			font-size: 20px;
+		}
+		#head_font {
+			font-family: "Times New Roman", Times, serif;
+			font-size: 34px;
+			letter-spacing: 3.6px;
+			word-spacing: -2.6px;
+			color: #FF36BD;
+			text-shadow: 1px 2px 2px #000000;
+			font-weight: normal;
+			text-decoration: none;
+			font-style: italic;
+			font-variant: normal;
+			text-transform: capitalize;
 		}
 		.content {
 			display: none;
 		}
 		.home {
-			text-decoration: none;
-			color: black;
+			-moz-box-shadow:inset 0px 1px 0px 0px #fadce3;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #fadce3;
+			box-shadow:inset 0px 1px 0px 0px #fadce3;
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fabec6), color-stop(1, #e87f7f));
+			background:-moz-linear-gradient(top, #fabec6 5%, #e87f7f 100%);
+			background:-webkit-linear-gradient(top, #fabec6 5%, #e87f7f 100%);
+			background:-o-linear-gradient(top, #fabec6 5%, #e87f7f 100%);
+			background:-ms-linear-gradient(top, #fabec6 5%, #e87f7f 100%);
+			background:linear-gradient(to bottom, #fabec6 5%, #e87f7f 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fabec6', endColorstr='#e87f7f',GradientType=0);
+			background-color:#fabec6;
+			-moz-border-radius:6px;
+			-webkit-border-radius:6px;
+			border-radius:6px;
+			border:1px solid #f285a4;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Arial;
+			font-size:15px;
+			font-weight:bold;
+			padding:12px 15px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #cc5468;
+			margin-bottom: 5px;
+		}
+		.home:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e87f7f), color-stop(1, #fabec6));
+			background:-moz-linear-gradient(top, #e87f7f 5%, #fabec6 100%);
+			background:-webkit-linear-gradient(top, #e87f7f 5%, #fabec6 100%);
+			background:-o-linear-gradient(top, #e87f7f 5%, #fabec6 100%);
+			background:-ms-linear-gradient(top, #e87f7f 5%, #fabec6 100%);
+			background:linear-gradient(to bottom, #e87f7f 5%, #fabec6 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e87f7f', endColorstr='#fabec6',GradientType=0);
+			background-color:#e87f7f;
+		}
+		.home:active {
+			position:relative;
+			top:1px;
+		}
+		.collapsible {
+			-moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+			box-shadow:inset 0px 1px 0px 0px #efdcfb;
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6417a3), color-stop(1, #d39eff));
+			background:-moz-linear-gradient(top, #6417a3 5%, #d39eff 100%);
+			background:-webkit-linear-gradient(top, #6417a3 5%, #d39eff 100%);
+			background:-o-linear-gradient(top, #6417a3 5%, #d39eff 100%);
+			background:-ms-linear-gradient(top, #6417a3 5%, #d39eff 100%);
+			background:linear-gradient(to bottom, #6417a3 5%, #d39eff 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6417a3', endColorstr='#d39eff',GradientType=0);
+			background-color:#6417a3;
+			-moz-border-radius:6px;
+			-webkit-border-radius:6px;
+			border-radius:6px;
+			border:1px solid #c584f3;
+			display:inline-block;
+			cursor:pointer;
+			color:#e9d7f5;
+			font-family:Times New Roman;
+			font-size:15px;
+			font-weight:bold;
+			padding:6px 24px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #000000;
+		}
+		.collapsible:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d39eff), color-stop(1, #6417a3));
+			background:-moz-linear-gradient(top, #d39eff 5%, #6417a3 100%);
+			background:-webkit-linear-gradient(top, #d39eff 5%, #6417a3 100%);
+			background:-o-linear-gradient(top, #d39eff 5%, #6417a3 100%);
+			background:-ms-linear-gradient(top, #d39eff 5%, #6417a3 100%);
+			background:linear-gradient(to bottom, #d39eff 5%, #6417a3 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d39eff', endColorstr='#6417a3',GradientType=0);
+			background-color:#d39eff;
+		}
+		.collapsible:active {
+			position:relative;
+			top:1px;
+		}
+		.expand {
+			-moz-box-shadow:inset 0px 1px 0px 0px #807e70;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #807e70;
+			box-shadow:inset 0px 1px 0px 0px #807e70;
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #28b867), color-stop(1, #4d4942));
+			background:-moz-linear-gradient(top, #28b867 5%, #4d4942 100%);
+			background:-webkit-linear-gradient(top, #28b867 5%, #4d4942 100%);
+			background:-o-linear-gradient(top, #28b867 5%, #4d4942 100%);
+			background:-ms-linear-gradient(top, #28b867 5%, #4d4942 100%);
+			background:linear-gradient(to bottom, #28b867 5%, #4d4942 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#28b867', endColorstr='#4d4942',GradientType=0);
+			background-color:#28b867;
+			-moz-border-radius:6px;
+			-webkit-border-radius:6px;
+			border-radius:6px;
+			border:1px solid #fafafa;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Times New Roman;
+			font-size:15px;
+			font-weight:bold;
+			padding:6px 24px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #000000;
+		}
+		.expand:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4d4942), color-stop(1, #28b867));
+			background:-moz-linear-gradient(top, #4d4942 5%, #28b867 100%);
+			background:-webkit-linear-gradient(top, #4d4942 5%, #28b867 100%);
+			background:-o-linear-gradient(top, #4d4942 5%, #28b867 100%);
+			background:-ms-linear-gradient(top, #4d4942 5%, #28b867 100%);
+			background:linear-gradient(to bottom, #4d4942 5%, #28b867 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4942', endColorstr='#28b867',GradientType=0);
+			background-color:#4d4942;
+		}
+		.expand:active {
+			position:relative;
+			top:1px;
+		}
+		.collapse {
+			-moz-box-shadow:inset 0px 1px 0px 0px #807e70;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #807e70;
+			box-shadow:inset 0px 1px 0px 0px #807e70;
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #28b867), color-stop(1, #4d4942));
+			background:-moz-linear-gradient(top, #28b867 5%, #4d4942 100%);
+			background:-webkit-linear-gradient(top, #28b867 5%, #4d4942 100%);
+			background:-o-linear-gradient(top, #28b867 5%, #4d4942 100%);
+			background:-ms-linear-gradient(top, #28b867 5%, #4d4942 100%);
+			background:linear-gradient(to bottom, #28b867 5%, #4d4942 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#28b867', endColorstr='#4d4942',GradientType=0);
+			background-color:#28b867;
+			-moz-border-radius:6px;
+			-webkit-border-radius:6px;
+			border-radius:6px;
+			border:1px solid #fafafa;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Times New Roman;
+			font-size:15px;
+			font-weight:bold;
+			padding:6px 24px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #000000;
+		}
+		.collapse:hover {
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4d4942), color-stop(1, #28b867));
+			background:-moz-linear-gradient(top, #4d4942 5%, #28b867 100%);
+			background:-webkit-linear-gradient(top, #4d4942 5%, #28b867 100%);
+			background:-o-linear-gradient(top, #4d4942 5%, #28b867 100%);
+			background:-ms-linear-gradient(top, #4d4942 5%, #28b867 100%);
+			background:linear-gradient(to bottom, #4d4942 5%, #28b867 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4942', endColorstr='#28b867',GradientType=0);
+			background-color:#4d4942;
+		}
+		.collapse:active {
+			position:relative;
+			top:1px;
 		}
 	</style>
 </head>
 
 <body>
-	<a class="home" href="javascript:history.back()">Home<br></a>
+	<div>
+		<a class="home" href="javascript:history.back()">Home</a>
+	</div>
+	<div style="margin-bottom: 5px;">
+		<a class="expand" onclick="expand_all()">Expand All<br></a>
+		<a class="collapse" onclick="collapse_all()">Collapse All<br></a>
+	</div>
 	
-	<h1> In the beginning there was nothing, but then everything happened... </h1>
+	<h1 id="head_font"> In the beginning there was nothing, but then everything happened... </h1>
 	<button class="collapsible">May 10th Pt. 1</button>
 	<div class="content">
 		<p>Having recently purchased a desk for my computer, and having run into the problem of wearing the small instruction manual I had been using as a mouse-pad thin, I found myself wanting a proper mouse pad. I began my search going to ol' reliable - amazon.ca. I was quite surprised by the sheer number of mouse pads that they had for sale, and equally stunned by the number of garbage designs that I was seeing. Tired of all the trash that the site offered, I instead went to Google, to search my way through the interwebs to find the perfect match for me. "Buy mouse pads online", a simple search that I was sure would yield the results that I had hoped. 9,000,000 results. The number was staggering, but like a good internet user I knew that if it was not on the first page, it would not likely be worth inspecting. I don't know why what I saw was surprising to me, but nonetheless, one of the first results that I found was for best-buy. I guess I had never made the connection that a place that sells computers, and computer accessories, would ever sell something that isn't electronic. Intrigued, I clicked the site and began my search anew. Familiar with the yellow and blue of Best Buy, I swiftly made my way to the mousepads, and sorting by price from lowest to highest, due to me being a poor-boi, skimmed the site with hope renewed. I was, however, disappointed again. More bland designs, more black pads that had to <i>oomf</i> to them. I had a thought at that moment, if BestBuy sold mousepads, then certainly the store to end all stores would also sell them. I quickly made my way, less excited, and more disappointed than ever, to the haven that is Walmart.ca. The Holy glow that surround the site began to fade however, as even though the prices were low, so were the number of mousepads. At this point I had nigh given up at the idea that I would find a mousepad that I actually enjoyed. I went back to Google and continued my search. The next item on the list, VistaPrint - Create Custom Mouse Pads. This was it, the answer that I had been looking for, but what should I put on the mousepad, that quest was one of the most difficult of all. I thought and thought, but no inspiration was coming to me. Unlike most people, I don't actually like a lot of things enough to buy products because of the connection, so choosing an image was very difficult. Stuck in a rut, I decided to go back to Amazon to see if I could find inspiration in one of the designs, or in other words, rip the design off but make it better. Page after page had nothing, so I went further and further down the rabbit hole, eventually hitting a wall of mouse pads by the same company. Continuing to scroll through them, I eventually got annoyed and just picked a random page, hoping to pass the highly prolific manufacturer. When loaded the page seemed to be just like any other, though I was past the brand, nothing was very interesting. Then I hit the bottom, the last item on the page. This was the Holy Grail, this was the one that I needed in my life. It was terrible, the design and the saying, I can still picture it now, 6 months later as I write this story - "Mommy needs another glass of wine." Little did I know that this would have a deep and profound effect on my life.</p>
@@ -46,6 +225,18 @@
 		      content.style.display = "block";
 		    }
 		  });
+		}
+		function expand_all() {
+			for (i = 0; i < coll.length; i++) {
+				var content = coll[i].nextElementSibling;
+				content.style.display = "block";
+			}
+		}
+		function collapse_all() {
+			for (i = 0; i < coll.length; i++) {
+				var content = coll[i].nextElementSibling;
+				content.style.display = "none";
+			}
 		}
 	</script>
 

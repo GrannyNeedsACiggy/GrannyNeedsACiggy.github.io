@@ -3,14 +3,27 @@
 <html>
 
 <head>
-	<title>The Art</title>
-
+	<title>GrannyCiggy</title>
 	<style type="text/css">
 		body {
 			background-color: #b9dae8;
 		}
-		img {
-			max-width: 40vw;
+		p {
+			color: black;
+			font-size: 20px;
+		}
+		#head_font {
+			font-family: "Times New Roman", Times, serif;
+			font-size: 34px;
+			letter-spacing: 3.6px;
+			word-spacing: -2.6px;
+			color: #FF36BD;
+			text-shadow: 1px 2px 2px #000000;
+			font-weight: normal;
+			text-decoration: none;
+			font-style: italic;
+			font-variant: normal;
+			text-transform: capitalize;
 		}
 		.content {
 			display: none;
@@ -175,10 +188,10 @@
 		.collapse:active {
 			position:relative;
 			top:1px;
-		}		
+		}
 	</style>
 </head>
-
+	
 <body>
 	<div>
 		<a class="home" href="javascript:history.back()">Home<br></a>
@@ -187,18 +200,15 @@
 		<a class="expand" onclick="expand_all()">Expand All<br></a>
 		<a class="collapse" onclick="collapse_all()">Collapse All<br></a>
 	</div>
-	<button class="collapsible">Christmas Granny</button>
+	<button class="collapsible">April 15th 2019: Pt. 1</button>
 	<div class="content">
-		<img src="Images/GranCig_Christmas.png"  >
+		<p>There have been great leaps forward in motivation today. I have come across a rather peculiar website while I was browsing the usual channels. It was so weird, so intriguing. I needed to know who made it. And I found out, and everything started to click. It's like I finally have some drive to do something even mildly creative. The only downside is that it is currently 1:53 a.m and I have to get up for work at 6:30 a.m. Why does this only happen when I have to do something the next day...</p>
 	</div>
-	<button class="collapsible">Jaundice Granny</button>
+	<button class="collapsible">April 15th 2019: Pt. 2</button>
 	<div class="content">
-		<img src="Images/JaundiceMoreLikeJaunWORTH.jpg">
+		<p>It is currently 2:27 a.m and I have made the buttons not look like someone shit them out in 1996. Everything else still looks like normal, but atleast the background isn't fucking blinding anymore. Atleast I accomplished something that I have wanted to due. As it is, I haven't worked on this site in months, and I really want to do something with it. Even if it is currently just a dumping ground for some of the dumb shit I've made.</p>
 	</div>
-	<button class="collapsible">Story Time Granny</button>
-	<div class="content">
-		<img src="Images/TheLastCiggy.jpg">
-	</div>
+
 	<script>
 		var coll = document.getElementsByClassName("collapsible");
 		var i;
