@@ -17,51 +17,25 @@
 		#Banner {
 			position: relative;
 			background-color: black;
-			height: 20vh;
 			width: 100vw;
 			text-align: center;
 		}
 
-		#Motivation {
-			color: white;
-			font: times;
-			font-size: 12vh;
-			text-align: center;
-		}
-
-		#Subsections {
+		#SubsectionsList {
 			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: #ffcccc;
-			height: 15vh;
 			width: 100vw;
-			text-align: center;
+			background-color: #fcd1da;
 		}
 
-		#Directory {
+		#SubsectionsYouTube {
+			display: flex;
+			font-size: 0;
+			width: 100vw;
+			background-color: #6ec3b0;
+		}
+
+		a {
 			margin: 0;
-			padding: 0;
-		}
-
-		li {
-			display: inline-flex;
-			justify-content: center;
-			text-align: center;
-		}
-
-		li a {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			color: black;
-			text-decoration: none;
-			font-size: 40px;
-			width: 22vw;
-			height: 15vh;
-		}
-		li a:hover {
-			background: #ccccff;
 		}
 
 	</style>
@@ -69,17 +43,22 @@
 	
 <body>
 	<div id="Banner">
-		<h1 id="Motivation"><a href="Motivation.html" style="text-decoration: none; color: white;">Motivation</a></h1>
-	</div>
+		<a href="Motivation.html" style="text-decoration: none; margin: 0"><img src="Images/HeaderMotivation.png" style="width: 100vw" ></a>
 	
-	<div id="Subsections">
-		<ul id="Directory">
-			<li><a href="TheStory.html" >The Story</a></li>
-			<li><a href="TheArt.html" >The ART</a></li>
-			<li><a href="TheMusic.html" >The Music</a></li>
-			<li><a href="TheJokes.html" >The Jokes</a></li>
-		</ul>
+	<div id="SubsectionsList">
+		<a href="TheStory.html" ><img src="Images/ListTheStory.png" style="width: 25vw"></a>
+		<a href="TheArt.html" ><img src="Images/ListTheArt.png" style="width: 25vw"></a>
+		<a href="TheMusic.html" ><img src="Images/ListTheMusic.png" style="width: 25vw"></a>
+		<a href="TheJokes.html" ><img src="Images/ListTheJokes.png" style="width: 25vw"></a>
 	</div>
+	<a href="https://www.youtube.com/channel/UCkpZY3DzWzrZt3kyqiJBJHA" target="_blank">
+		<div id="SubsectionsYouTube">
+			<img src="Images/YouTubeTemp.png" style="width: 25vw; float: left;">
+			<img src="Images/YouTubeTemp.png" style="width: 25vw; float: left;">
+			<img src="Images/YouTubeTemp.png" style="width: 25vw; float: left;">
+			<img src="Images/YouTubeTemp.png" style="width: 25vw; float: left;">
+		</div>
+	</a>
 	
 </body>
 
